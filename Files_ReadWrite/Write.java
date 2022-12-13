@@ -4,12 +4,19 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 
 public class Write {
-    public static void Writer() {
+    public Write() {}
+
+    public void Writer(int numLines, int numColumns) {
         try {
             FileOutputStream file = new FileOutputStream("file.txt");
             PrintWriter pr = new PrintWriter(file);
 
-            pr.println("Linha1 Coluna1 ; Linha1 Coluna2; Linha1 Coluna3");
+            for (int i = 0; i < numColumns; i++) {
+                for (int j = 0; j < numLines; j++) {
+                    pr.print(i + ":" + j + "   ");
+                }
+                pr.println();
+            }
 
             pr.close();
             file.close();

@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 public class Read {
-    public static void Reader() {
+    public Read() {}
+
+    public void Reader() {
         try {
             FileInputStream file = new FileInputStream("file.txt");
             InputStreamReader input = new InputStreamReader(file);
